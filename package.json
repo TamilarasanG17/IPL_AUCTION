@@ -1,0 +1,29 @@
+{
+  "name": "ipl-auction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start server.js && pm2 start addplayer.js && pm2 start addteam.js",
+    "new": "concurrently \"nodemon server.js\" \"nodemon addplayer.js\" \"nodemon addteams.js\"",
+    "vt": "nodemon server.js",
+    "dev": "nodemon addplayer.js",
+    "tamil": "nodemon addteams.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "nodemailer": "^6.9.15",
+    "pm2": "^5.4.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7"
+  }
+}
